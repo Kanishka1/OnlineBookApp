@@ -26,3 +26,5 @@ public class Hotel {
 	Set<Delivery> delivery;
 
 }
+//Test 
+//Set<Menu,Delivery> menu,delivery
