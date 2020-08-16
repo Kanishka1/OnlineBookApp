@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="./js/jquery-3.5.1.js"></script>
+<script type="text/javascript">  
+    $(document).ready(function() {  
+        $('.test1').click(function(){  
+            $(this).animate({'left':'600px'},3000,function () {  
+                $(this).css('background-color','red');  
+            });  
+        });  
+          
+        $(".test2").click(function() {  
+            $(this).animate({"left" : "600px"}, 5000, function() {  
+                $(this).animate({  
+                    "width" : "200px",  
+                    "height" : "200px",  
+                    "border-radius" : "100px"  
+                }, 3000, function() {  
+                    $(this).fadeOut('slow');  
+                });  
+            });  
+        });  
+    });  
+</script>
+<style type="text/css">  
+    .test1,.test2 {  
+        position: absolute;  
+        left: 10px;  
+        top: 50px;  
+        border-radius: 50px;  
+        background-color: pink;  
+        width: 100px;  
+        height: 100px;  
+        text-align: center;  
+    }  
+    .test2 {  
+        left: 10px;  
+        top: 200px;  
+        background-color: olive;  
+    }  
+    .test2 p{  
+        position: absolute;  
+    left: 10px;  
+        top: 200px;  
+        text-align: center;  
+    }  
+    </style>  
+    </head>  
+    <body>  
+        <div class="test1">Rock</div>  
+        <div class="test2">Roll</div>  
+          
+    </body>
+    </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<title>Document</title>  
+<script type="text/javascript">  
+function call(){  
+if(confirm("Do you want to leave ?")){  
+    alert("Bye");  
+    document.myform.submit(); 
+}  
+    else{  
+    name = document.getElementById("uname").value;      
+    alert("Thanks for staying back "+name);  
+     document.getElementById("mydiv").innerHTML = 'welcome back '+name;  
+     
+    }  
+}  
+</script>  
+</head>  
+<body>  
+<form action="../index.html" name="myform">  
+Text: <input type="text" value="enter name" id = "uname"> <br>
+<input type="button" value="SUBMIT" onclick="call()">  
+</form>  
+<div id="mydiv"></div>  
+</body>  
+</html>  

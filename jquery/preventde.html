@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="./js/jquery-3.5.1.js"></script>
+<script>  
+    $(document).ready(function(){  
+//direct event handler  
+        $('#mylist a:first').on('click',function(event){  
+                        event.preventDefault();  
+                        $(this).text ('Enjoy your surfing')  
+             console.log($(this).text());  
+            });  
+          
+$('#mylist').append('<li><a href="http://www.google.com">Add Item 4</a>    </li>');  
+//event handler with most refined selector  
+$('#mylist ').on('click','li',function(event){  
+            event.preventDefault();  
+            $(this).css ({"list-style-type":"square","background-color":"grey"})  
+             console.log($(this).text());  
+            });  
+              
+    });  
+    </script>
+<body>
+    <div>  
+        <ul id="mylist">  
+                      
+        <li><a href="http://www.google.com">Add Item1</a>    </li>      
+        <li><a href="http://www.flipkart.com">Add Item2</a>    </li>  
+        <li><a href="http://www.amazon.com">Add Item3</a>    </li>  
+                  
+        </ul>      
+    <div>  
+              
+</body>
+</html>

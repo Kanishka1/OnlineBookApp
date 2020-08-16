@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () 
+        {
+            $('p').click(function() {
+                $(this).hide();
+            });
+            $('h1').click(()=>
+            {
+                $('p').show();
+                $('p').text('<strong> WELCOME </strong>');
+                var uname= $("#username").val();
+                $("#mydiv").html('<strong> WELCOME </strong>'+uname);
+
+            });
+            $('#btn').click(()=>
+            {            
+                var fname= $("#username").val();
+                var lname=$("#lname").val();
+                $("#div1").html('<strong> WELCOME </strong>'+fname+" "+lname);
+            });
+            $('h2').click(()=>$("p").css("text-transform","lowercase"));
+        });
+    </script>
+</head>
+<body>
+    <p>"KANISHKA LAHORI" </p>
+    <h1>Hide Me</h1>
+    <h2>Check CSS </h2>
+
+    <div id="mydiv"></div>
+    
+
+    First Name: <input type="text" id="username">
+    Last Name: <input type="text" id="lname">
+    <input type="button" id="btn" value="click me">
+    <div id="div1"></div>
+</body>

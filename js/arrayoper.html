@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var names = new Array(4);  
+names[0]="Ram";  
+names[1]="Tom";  
+names[2]="Shyam";  
+names[3]="Manu";  
+names[9]="Oggy";  
+for ( var i = 0; i < names.length; i++) {  
+    document.write("<br>"+names[i]);  
+}  
+nums=[16,9,33,264,45,86];  
+document.write("<br>Adding element to the array ");  
+nums.push(98);  
+document.write(nums);  
+document.write("<br>reversing array ");  
+nums.reverse();  
+document.write(nums);  
+document.write("<br>sorting array ");  
+nums.sort();  
+document.write(nums+"<br>");  
+nums.sort(sortArray);  
+function sortArray(a,b){  
+return a-b;  
+}  
+document.write(nums+"<br>");  
+var arr = new Array(20,30,70); 
+document.write(arr[0]);  
+document.write(arr[1]);  
+document.write(arr[2]);  
+document.write("HELLO"); 
+arr.find(40);
+arr = new Array(20);  
+document.write(arr[0]);  
+</script>  
+</body>
+</html>

@@ -1,0 +1,22 @@
+h1 {
+  background-color: yellow;
+  color: green;
+}
+
+div {
+  height: 100px;
+  width: 155px;
+  background-color: pink;
+}
+
+p, #myid {
+  background-color: pink;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#myid {
+  color: blue;
+  font-weight: bold;
+}
+/*# sourceMappingURL=style2.css.map */

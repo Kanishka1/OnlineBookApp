@@ -1,0 +1,24 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="ISO-8859-1">  
+<title>Insert title here</title>  
+</head>  
+<body>  
+    <h1>Online Shopping</h1>  
+    <hr>  
+    <div id="mydiv" style="color: red; background-color: aqua"></div>  
+    <script>  
+    alert(document.cookie);  
+    var cookieArr = document.cookie.split(';');  
+for(i=0;i<cookieArr.length;i++){  
+    var cookie = cookieArr[i].split("=");  
+    var cookieName = cookie[0];  
+    var cookieValue = cookie[1];  
+if(cookieName == 'newuser'){  
+        document.getElementById("mydiv").innerHTML ='welcome back '+cookieValue;  
+    }  
+}  
+</script>  
+</body>  
+</html>

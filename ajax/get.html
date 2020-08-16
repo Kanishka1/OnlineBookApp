@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="../jquery/js/jquery-3.5.1.js"></script>
+<script>  
+    $(document).ready(function () {  
+    $("#table").hide();  
+    $("button").click(function () {  
+    $.get("students.json", function (data, status) {  
+    $("#table").show();  
+    for (const key in data) {  
+    if (data.hasOwnProperty(key)) {  
+    const student = data[key];      
+    var tab = "<tr><td>" + student.name + "</td>";  
+    tab = tab + "<td>" + student.studId + "</td>";  
+    tab = tab + "<td>" + student.city + "</td>";  
+    tab = tab + "<td>" + student.department + "</td>";  
+    tab = tab + "<td>" + student.hobbies + "</td></tr>";  
+    $('#table').append(tab);  
+    }  
+    }  
+    })  
+    })  
+    })  
+    </script>
+<body>
+    <button>click to get message</button>  
+    <div id="test2"></div>
+    <br>
+    <div id="test1"></div>
+    <table style="border: solid; box-sizing: 1px;column-gap: 5rem;" id="table">  
+        <tr>  
+        <th>name</th>  
+        <th>id</th>  
+        <th>city</th>  
+        <th>department</th>  
+        <th>hobbies</th>  
+        </tr>  
+        </table>  
+        </div>
+        
+</body>
+</html>

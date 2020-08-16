@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<script src="../jquery/js/jquery-3.5.1.js"></script>
+<script src="hotelscript.js"> </script>
+<body>
+
+    <div class="header">
+        <a href="#" class="name">Tour App</a>
+        <div style="float:right;">
+          <a  href="index.html">Home</a>
+          <a href="tourapp.html">Tourist Places</a>
+          <a class="active" href="hotel.html">Hotels</a>
+          <a href="event.html">Events</a>
+          <a href="adddetails.html">Add Details</a>
+        </div>
+      </div> 
+      <div class="form1" style="height: 131px;">
+        <form >
+        <input type="button" value="Get All Hotels" id="btn1" style="margin-top: 43px;">
+        </form>
+      </div>
+      <div class="form1">
+        <form >
+        Enter Name To Get Hotel Details <input type="text" id="uname" name="firstname" placeholder="Your name..">
+        <input type="button" value="Get Hotel Details" id="btn">
+        </form>
+      </div>
+      <div class="form1" style="margin-left: 250px;">
+        <form>
+        Enter Location To Get Hotel Details<input type="text" id="location" name="firstname" placeholder="Your name..">
+        <input type="button" value="Get Hotel Details" id="btn2">
+        </form>
+      </div>
+   
+        <table id="table" border="2" class="form1" style="width: 100%;">    
+            <tr>  
+            <th>Name</th>  
+            <th>Location</th> 
+            <th>City</th> 
+            <th>State</th>    
+            </tr>  
+            </table>  
+
+</body>
+</html>

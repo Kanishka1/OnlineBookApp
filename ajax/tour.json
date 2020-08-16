@@ -1,0 +1,6 @@
+{
+    "id": 3,
+    "hotel":{"name": "Sky Lounge", "address":{"location":"Civic Center","city":"Jabalpur","state":"MP"}},
+            "touristplace":{"name": "Dumna Nature Park", "description": "Wildlife Sanctuary Park", "address":{"location":"Near IIITDMJ","city":"Jabalpur","state":"MP"}},
+            "event": {"name": "Group Song Competition", "description": "A Musical Event", "date": "August 8", "time": "8", "address":{"location":"Tarang Auditorium","city":"JBP","state":"MP"}}
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<title>Insert title here</title>  
+</head>  
+<script type="text/javascript">  
+alert(document.cookie);  
+    var cookieArr = document.cookie.split(';');  
+      
+    function login() {  
+        uname = document.getElementById("username").value;  
+        for (i = 0; i < cookieArr.length; i++) {  
+            alert(cookieArr[i]);  
+            var cookie = cookieArr[i].split("=");  
+            var cookieName = cookie[0];  
+            var cookieValue = cookie[1];  
+            alert(cookieName+" "+cookieValue);  
+            if (cookieValue == uname) {  
+                document.myform.submit();  
+            }  
+        }  
+          
+    }  
+</script>  
+<body>  
+<h1>Login</h1>  
+    <form action="success.html" name="myform">  
+        Enter Name<input type="text" id="username"> <input  
+            type="button" onclick="login()" value="click here">  
+    </form>  
+</body>  
+</html>

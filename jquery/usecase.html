@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="./js/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#show").hide();
+            $('#btn').click(()=>
+            {            
+                var fname= $("#name").val();
+                $("#div1").html('WELCOME '+fname);
+                $("#show").show();
+            });
+            var mobile=[
+                {
+                    name: 'Nokia',
+                    price:10000,
+                    year:2018
+                },
+                {
+                    name: 'Samsung',
+                    price:15000,
+                    year:2017
+                }
+            ];
+            var laptop=[{
+                    name: 'HP',
+                    price:40000,
+                    year:2018
+                },
+                {
+                    name: 'DELL',
+                    price:45000,
+                    year:2017
+                }];
+                $("input[type='radio']").change(function() {    
+                    var selected = $("input[type='radio']:checked").val();
+                    $("#btn2").click(()=>
+                    {
+                   // console.log(selected)
+                    if(selected=="mobile")
+                    {
+                        for(var i in mobile)
+                        {
+                            var details=$("#mobilediv").html();
+                            $("#mobilediv").html(details+" "+mobile[i].name+' '+ mobile[i].price+"<br>");
+                        }
+                    }
+                    else if(selected=="laptop")
+                    {
+                        for(var i in laptop)
+                        {
+                            $("#mobilediv").hide();
+                            var details=$("#laptopdiv").html();
+                            $("#laptopdiv").html(details+" "+laptop[i].name+' '+ laptop[i].price+"<br>");
+                        }
+                    }
+                });
+                });
+        });
+    </script>
+<body>
+    Name:<input type=text id="name">
+    <input type="button" id="btn" value="VIEW CATALOG">
+    <div id="div1"></div>   
+    <div id="show">
+    <input type="radio" class="mobile" value="mobile" name="rad" id="radio">Mobile
+    <div id="mobilediv"></div>
+    <input type="radio" class="mobile" value="laptop"  name="rad" id="radio">Laptop
+    <div id="laptopdiv"></div>
+    <input type="button" id="btn2" value="show details">
+   </div>
+</body>
+</html>

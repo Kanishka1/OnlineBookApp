@@ -1,0 +1,61 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Document</title>  
+</head>  
+<body>  
+    <script>  
+          
+function Employee(username){  
+var name;  
+this.setName = function(uname){  
+    name = username.toUpperCase()+uname;  
+}  
+this.getName = function(){  
+     return name;  
+}  
+}  
+var employee = new Employee("Rohan");  
+employee.setName("Kumar");  
+console.log(employee.getName());  
+</script>  
+<script>          
+function Employee(username){  
+var name;  
+_setName = function(uname){  
+    name = username.toUpperCase()+uname;  
+}  
+_getName = function(){  
+     return name;  
+}  
+return{  
+     setName:_setName,  
+     getName:_getName  
+}  
+}  
+var employee = new Employee("Rohan");  
+employee.setName("Kumar");  
+console.log(employee.getName());  
+</script>  
+<script>
+function Employee(username){  
+var name;  
+return{  
+    setName:function(uname){  
+    name = username.toUpperCase()+uname;  
+},  
+    getName: function(){  
+    return name;  
+}  
+}  
+}  
+var employee = new Employee("Rohan");  
+employee.setName("Kumar");  
+console.log(employee.getName());  
+</script> 
+</body>  
+<sccript src="">
+
+</sccript>
+</html>  

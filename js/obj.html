@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head><script>
+        var student={  
+            name:'Raj',  
+            hobbies:["a","b","c"],  
+            address:{  
+                city:"Bangalore",  
+                state:"KAR"  
+            }  
+        }  
+        for(var i in student)
+        {  
+         if(typeof(student[i])=="object")
+         {
+            for(var k in student[i]) 
+            {  
+                document.write(student[i][k]+"<br>")  
+            }
+        }
+        else{
+            document.write(student[i]+"<br>"); 
+        }
+        }
+</script>
+
+<body>
+    
+</body>
+</html>

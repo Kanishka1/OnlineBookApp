@@ -1,0 +1,20 @@
+[  
+    {  
+    "title":"Java",  
+    "author":"Kathy",  
+    "price":3000,  
+    "category":"Tech"  
+    },  
+    {  
+    "title":"Spring in Action",  
+    "author":"Rod",  
+    "price":3000,  
+    "category":"Tech"  
+    },  
+    {  
+    "title":"Java",  
+    "author":"Kathy",  
+    "price":3000,  
+    "category":"Tech"  
+    }  
+    ]

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script type="text/javascript">  
+        $(document).ready(function(){  
+            $("#b1").click(function(){  
+        $("#test1").slideDown(3000, function(){  
+            $("#test1").css({"background-color":"green"});  
+        });  
+            });  
+            $("#b2").click(function(){  
+        $("#test1").slideUp('slow','linear');  
+            });  
+            $("#b3").click(function(){  
+        $("#test1").slideToggle(3000);  
+            });  
+        });  
+        </script>
+     
+<style type="text/css">  
+    #test1{  
+    padding: 50px;  
+    background-color: pink;  
+    text-align: center;  
+    display: none;  
+    color:maroon;  
+    }  
+    </style>  
+    </head>  
+    <body>  
+    <div id="test1">  
+    <b> Welcome to the show</b>  
+    </div>  
+    <input type="button" id="b1" value="Open "/>  
+    <input type="button" id="b2" value="close"/>  
+    <input type="button" id="b3" value="Toggle now"/>  
+    </body>

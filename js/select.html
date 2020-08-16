@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select  id="sel" onchange="changed()">  
+    <option value="TV">TV</option>  
+    <option value="Laptop">Laptop</option>  
+    <option value="Mobile">Mobile</option>  
+    <option value="Computer">Computer</option>  
+    </select>
+    <div id="mydiv" style="background-color: black; color: blanchedalmond;"></div>  
+</body>
+<script>
+    function changed()
+    {
+    var name = document.getElementById("sel").value; 
+    //console.log(name);
+    laptop=['HP','Dell'];
+    mobile=["apple","nokia"];
+    computer=['LG','HP'];
+    if(name=="Laptop")
+    {
+        console.log(laptop);
+        document.getElementById("mydiv").innerHTML=laptop;
+    }
+    else if(name=="Mobile")
+    {
+        document.getElementById("mydiv").innerHTML=mobile;
+    }
+    else 
+    {
+        document.getElementById("mydiv").innerHTML=computer;
+    }
+}
+</script>
+</html>

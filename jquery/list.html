@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script>  
+        $(document).ready(function(){  
+              
+            $("#cart").click(function () {  
+                $('ul li:eq(3)').text('Mobiles').css('color','red');  
+                $('ul li:first-child').text('TV').css('color','blue');  
+                $('#row ul>li:nth-child(4)').text('Laptops').css('color','green');  
+            });  
+            $("button:last").click(function () {  
+                $('ul li:nth-child(3)').text('Tablets').css('color','red');  
+                $('ul li:nth-last-child(2)').text('Speaker').css('color','blue');  
+                $('#row ul>li:first-child').text('Pendrive').css('color','green');  
+            });  
+});  
+    </script>
+</head>
+<body>  
+<p id="heading" class="myclass"></p>  
+    <div id = "container">  
+    <p class="myclass">Select your Items </p>  
+    <ul>  
+        <li>Item 1</li>  
+        <li>Item 2</li>  
+        <li>Item 3</li>  
+        <li>Item 4</li>  
+        <li>Item 5</li>  
+        <li>Item 6</li>  
+    </ul>  
+    <div id="row">  
+    <p class="myclass">View Cart </p>  
+    <ul>  
+        <li>Item 1</li>  
+        <li>Item 2</li>  
+        <li>Item 3</li>  
+        <li>Item 4</li>  
+        <li>Item 5</li>  
+        <li>Item 6</li>  
+    </ul>  
+    <button id="cart">Change First list </button>  
+    <button >Change Second list </button>  
+      
+</div>  
+</div>  
+</body>  
+</html>  

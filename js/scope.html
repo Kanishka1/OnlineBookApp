@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>  
+        var lnum =10;// local to this file  
+        gnum=20;//global  
+        function declareVar() {  
+        myglobal =200;    // no var so global  
+            var mylocal=30; // local  
+        }  
+        var message = "outside function";  
+        function printVar() {  
+            var message = "inside function";  
+            document.write("with var - local "+lnum+"<br>");  
+            document.write("without var - global "+gnum+"<br>");  
+            document.write("without var inside function - global "+myglobal+"<br>");  
+            document.write("with var inside function - local "+mylocal+"<br>");  
+            document.write(message+"<br>");  
+        }  
+        document.write("Print First- "+message+"<br>");  
+        declareVar();  
+        printVar();  
+</script>
+</head>
+<body>
+    
+</body>
+</html>

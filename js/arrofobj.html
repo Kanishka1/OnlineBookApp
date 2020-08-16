@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var studentList=[{
+            name:"kanishka",hobbies:['sports','music'],address:{city:"JBP",state:"MP"}
+        },{
+            name:"ABC",hobbies:["dance","music"],address:{city:"BAN",state:"KAR"}
+        },{
+            name:"PQR",hobbies:["cooking","dance"],address:{city:"INDB",state:"MP"}
+        }]
+        document.write(studentList+"<br>");
+        for(var i in studentList)
+        {
+            var st=studentList[i]
+            for(var j in st)
+            {
+                var student=studentList[j];
+                if(typeof(student)==Object)
+                {
+                    for(var k in student)
+                    {
+                        document.write(student[k]+"<br");
+                    }
+                }
+                else
+                {
+                    document.write(student+"<br>");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

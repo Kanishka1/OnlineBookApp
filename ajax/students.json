@@ -1,0 +1,35 @@
+[{  
+    "name":"Rajalli",  
+    "studId":10,  
+    "city":"Bangalore",  
+    "department":"CSE",  
+    "hobbies":["cricket","music","reading"]  
+},  
+{  
+    "name":"Kumaran",  
+    "studId":11,  
+    "city":"Chennai",  
+    "department":"ECE",  
+    "hobbies":["music","reading"]  
+},  
+{  
+    "name":"Karuna",  
+    "studId":12,  
+    "city":"Delhi",  
+    "department":"CSE",  
+    "hobbies":["football","dance","reading"]  
+},  
+{  
+    "name":"Ramanaa",  
+    "studId":13,  
+    "city":"Delhi",  
+    "department":"CSE",  
+    "hobbies":["football","dance","sleeping"]  
+},  
+{  
+    "name":"Aadhil",  
+    "studId":14,  
+    "city":"Bangalore",  
+    "department":"ECE",  
+    "hobbies":["cricket","dance","reading"]  
+}]  

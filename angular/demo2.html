@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="my-app">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>  
+        <style>
+            table{
+                border: solid;
+                border-color: brown;
+                border-width: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div ng-controller='productCtrl'>
+            <!--  style="border:2px" -->
+            <table cellpadding="4" border="1">
+                <tr>
+                    <th>Item Number</th>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+                <tr ng-repeat="items in itemList">
+                    <td>{{$index+1}}</td>
+                    <td>{{items.name}}</td>
+                    <td><input type="number" ng-model="items.quantity"></td>
+                    <td>{{items.price|currency:'Rs'}}</td>
+                    <td>{{items.quantity*items.price|currency:'Rs'}}</td>
+                </tr>
+            </table>
+            <br>
+            <select ng-model='selecteditem' ng-options="item.name for item in itemList"></select>
+            {{selecteditem}}<br>
+            {{selecteditem.name}} {{selecteditem.price}}
+            <br>
+<!-- 
+            <select ng-model='newselecteditem' ng-options="item.price as item.name for item in itemList"></select>
+            {{newselecteditem}}<br>
+            {{newselecteditem.name}}<br>
+            {{newselecteditem.price}} -->
+
+            <select ng-model='newselectedItem' ng-options=" item.price as item.name for item in itemList"></select>  
+            {{newselectedItem}}<br>
+            {{newSelecteditem.name}}<br>
+            {{newSelecteditem.price}}
+        </div>
+
+        <div ng-controller="greetCtrl">
+            <p>Name : <input type="text" ng-model="fname"></p>
+            <p>Name : <input type="text" ng-model="lname"></p>
+            <input type="button" ng-click="sayHello()" value="CLICK ME">
+            <h1>{{user.firstname}}
+                {{user.lastname}}
+            </h1>
+
+            <p ng-bind="user.firstname" ng-style=cstyle></p>
+            <p ng-bind='user.lastname' 
+            ng-style='{"color":mycolor,"font-weight":myfontwt,"letter-spacing":spacing}'></p> 
+            
+           
+        </div>
+<script src="js/angular.min.js"></script>
+<script src="scripts/trial.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+$div_color:green;  
+$p_color:blue;  
+$header_color:yellow;  
+$height:50px;  
+$width:150px;  
+p{  
+background-color: $p_color;  
+}  
+h1{  
+background-color: $header_color;  
+color:$div_color;  
+}  
+div{  
+height:$height*2;  
+width:$width+5;  
+background-color: $div_color;  
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div ng-controller="bookCtrl" style="margin-top: 20px;" >
+    <table class="table"  border ='1' cellspacing="1" cellpadding="5">
+        <thead>
+         <tr >
+          <th>No</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Price</th>
+          <th>Category</th>
+         </tr>
+        </thead>
+        <tbody ng-repeat='book in bookList'>
+         <tr  style="color: blue;">
+          <td>{{$index+1}}</td>
+          <td>{{book.title}}</td>
+          <td>{{book.author}}</td>
+          <td>{{book.price}}</td>
+          <td>{{book.category}}</td>
+         </tr>
+        </tbody>
+       </table>
+    </div>
+     
+</body>
+<!-- <script src="../controller/bookctrl.js"></script>
+<script src="../services/bookservice.js"></script> -->
+</html>

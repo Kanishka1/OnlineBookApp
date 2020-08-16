@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function validate()
+    {
+        if(document.getElementById("uname").value=="")
+        {
+            document.myform.name.focus();
+        }
+        else if(document.getElementById("upass").value=="")
+        {
+            document.myform.pass.focus();
+        }
+        else if(document.getElementById("gen").value=="")
+        {
+            document.myform.gender.focus();
+        }
+        else if(document.getElementById("age").value<18 || document.getElementById("age").value>80)
+        {
+            document.myform.age.focus();
+        }
+    }
+</script>
+<body>
+    <form name="myform" method="get">
+        Username <input type="text" name="name" id="uname" value="" /><br/><br/>  
+        Password <input type="password" name="pass" id="upass" /><br/><br/>
+        Gender <input type="radio" name="gender" id="gen" value="MALE"/>
+        <input type="radio" name="gender" id="gen" value="FEMALE"/><br /><br/>
+        Age: <input type="number" name="age" min="18" max="80" step="2" id="age"/><br /><br/>
+        <input type="submit" value="Submit"onclick="validate()">
+        </form>
+</body>
+</html>

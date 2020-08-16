@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script>  
+        $(document).ready(function(){ 
+            
+        $("#button2").click(function () {  
+        $('p:nth-child(1)').css('font-size','xx-large'); //
+        $('p:nth-of-type(2)').css('color','orange');  
+        $('p:nth-last-child(2)').css('background-color','green');  
+        //$('p:nth-last-of-type(2)').css('color','red');   
+        });
+
+        $("#button3").click(function () {  
+        $('p:nth-child(2)').css('font-size','xx-large'); //second child of parent  
+        $('p:nth-of-type(2)').css('color','orange');  
+        $('p:nth-last-child(2)').css('background-color','green');  
+        //$('p:nth-last-of-type(2)').css('color','red');   
+            });     
+        });
+    </script>
+</head>  
+<body>  
+<p>First Paragraph</p>  
+<p>second Paragraph</p>  
+    <div id = "test1" style='border: 1px solid'>  
+    <p >First Child - p</p>  
+    <p >Second Child - p</p>  
+    <h3 >third Child - h3</h3>  
+    </div>  
+    <br>  
+    <div id="test2" style='border: 1px solid'>  
+    <h3 >First Child -h3</h3>  
+    <p > Second Child - p</p>  
+    <p >third Child - p</p>  
+    <p >fourth Child -p</p>  
+</div>  
+<br>  
+<div style='border: 1px solid'>  
+<p >First Child - p</p>  
+    <p >Second Child - p</p>  
+    <h3 >third Child -h3</h3>  
+    </div>       
+      
+ 
+<button id="button1">Check First </button>  
+<button id="button2">Check Last</button>  
+<button id="button3">Check n</button>
+</body>
+</html>

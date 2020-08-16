@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="my-app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <p>Input Binding</p>
+    <div>
+        <p>Name : <input type="text" ng-model="name"></p>
+        <h1>Hello {{name}}</h1>
+      </div>
+      <p>Angular Directives</p>
+      <div ng-init="courses=['Java','Python','Angular','Node']">
+        <ul>
+          <li ng-repeat="x in courses">
+            {{ x }}
+          </li>
+        </ul>
+        </div>
+
+<div  ng-init="employee=[
+{name:'Kanishka',city:'Jabalpur'},
+{name:'Prashi',city:'Bangalore'},
+{name:'ABC',city:'Indore'}]">
+
+<ul>
+  <li ng-repeat="x in employee">
+  {{ x.name + ', ' + x.city }}</li>
+</ul>
+</div>
+<p>Controllers</p>
+<div ng-controller='empCtrl'>
+    <ul>
+        <li ng-repeat="x in employee">
+        {{ x.name + ', ' + x.city }}</li>
+      </ul>
+</div>
+<p>Filters</p>
+<div ng-controller='greetCtrl'>
+    {{msg|nameWithA:'A'}}
+    {{msg1|nameWithA:'A'}}
+    {{person}}
+</div>
+<br>
+<div ng-controller='childCtrl'>
+    {{msg}}
+    {{title}}
+</div>
+<br>
+<div>
+    <p ng-show="true">This is a demo</p>
+    <p ng-hide="true">HIDDEN</p>
+</div>
+<br>
+<div ng-init='mybutton=false'>
+<input type="button" ng-disabled="!mybutton" value="Click Me">
+<input type="checkbox" ng-model="mybutton">Click To Proceed
+</div>
+<br>
+<div ng-controller="greetCtrl">
+    {{msg}}
+   <br> <input type="text" ng-model="username">
+    <input type="button" ng-click="greet(username)" value="Click To Proceed">
+</div>
+<div ng-controller="pCtr">
+    <table cellpadding="3" cellspacing="2">
+        <tr>
+            <th>Serial Number</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+        <tr ng-repeat="itemname in items">
+            <td>{{$index+1}}</td>
+            <td>{{itemname.name}}</td>
+            <td><input type="number" ng-model="itemname.quantity"></td>
+            <td>{{itemname.price|currency:"Rs"}}</td>
+            <td>{{itemname.quantity*itemname.price|currency:'Rs'}}</td>
+        </tr>
+    </table>
+</div>
+<script src="js/angular.min.js"></script>
+<script src="scripts/trial.js"></script>
+</body>
+
+</html>

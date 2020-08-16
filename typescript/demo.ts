@@ -1,0 +1,11 @@
+declare var num:number;  
+num=10;  
+console.log(num);  
+var message = 'Hello';  
+console.log(message);  
+var sample:string|number;  
+sample = 'This is a demo';  
+console.log(typeof sample);  
+sample = 10;  
+console.log(typeof sample);  
+var val:any = true;  

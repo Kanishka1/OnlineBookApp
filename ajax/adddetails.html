@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="form.css">
+</head>
+<script src="../jquery/js/jquery-3.5.1.js"></script>
+<script src="adddetails.js"> </script>
+<body>
+
+  <div class="header">
+    <a href="#" class="name">Tour App</a>
+    <div style="float:right;">
+      <a  href="index.html">Home</a>
+      <a href="tourapp.html">Tourist Places</a>
+      <a href="hotel.html">Hotels</a>
+      <a href="event.html">Events</a>
+      <a class="active" href="adddetails.html">Add Details</a>
+    </div>
+  </div> 
+
+      <div class="form1" style="margin-left: 25%;">
+        <form >
+        id<input type="text" id="tourid"  placeholder="Enter ID">
+        <h3>Enter Hotel Details</h3>
+        Hotel Name: <input type="text" id="hname"  placeholder="Enter Hotel Name">
+        Hotel Location:<input type="text" id="hlocation"  placeholder="Enter Hotel Location">
+        Hotel City<input type="text" id="hcity"  placeholder="Enter Hotel City">
+        Hotel State<input type="text" id="hstate"  placeholder="Enter Hotel State">
+        
+        <h3>Enter Tourist Place Details</h3>
+        Name<input type="text" id="tpname"  placeholder="Enter Tourist Place Name">
+        Description<input type="text" id="tpdesc"  placeholder="Enter Tourist Place Description">
+        Location<input type="text" id="tploc"  placeholder="Enter Tourist Place Location">
+        City<input type="text" id="tpcity"  placeholder="Enter Tourist Place City">
+        State<input type="text" id="tpstate"  placeholder="Enter Tourist Place State">
+
+        <h3>Enter Event Details</h3>
+        Event Name<input type="text" id="ename"  placeholder="Enter Event Name">
+        Event Description<input type="text" id="edesc"  placeholder="Enter Event Description">
+        Event Date<input type="text" id="edate"  placeholder="Enter Event Date">
+        Event Time<input type="text" id="etime"  placeholder="Enter Event Time">
+        Event Location<input type="text" id="eloc"  placeholder="Enter Event Location">
+        Event City<input type="text" id="ecity"  placeholder="Enter Event City">
+        Event State<input type="text" id="estate"  placeholder="Enter Event State">
+        <input type="button" value="Add Details" id="btn">
+        </form>
+      </div>
+      <div id="#test"></div>
+     
+</body>
+</html>

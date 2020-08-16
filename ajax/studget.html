@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="../jquery/js/jquery-3.5.1.js"></script>
+<script>  
+    $(document).ready(function () {  
+    // $("button").click(function () { 
+    //     var uname= $("#uname").val();
+    //     var city=$("#city").val();
+    //     url="http://localhost:8081/students-by-city/"+city;
+    // $.get(url, function (data, status) {  
+    //     $.each(data,(idx,student)=>
+    //     {
+    //         console.log(student);
+    //         $("#test").html(student.name+" "+student.city+"<br>");
+    //     })
+      
+
+    // })  
+    // })  
+    // $("#btn").click(function () { 
+    //     var obj={
+    //         name: $("#uname").val(),
+    //         city: $("#city").val(),
+    //         id: $("#id").val()
+    //     };
+    //     var st=JSON.stringify(obj);
+    //     url="http://localhost:8081/students";
+    // $.post(url,obj,function (data, status) 
+    // {  
+    //     $("#test").html("DONE ").append(st);
+    //    console.log(obj);
+
+    // })  
+    $("#btn").click(function () { 
+        var uname= $("#uname").val();
+      
+        url="http://localhost:8080/tourist-place-by-name/"+uname;
+    $.get(url,function (data, status) 
+    {  
+        
+        console.log(data);
+        var tab = "<tr><td>" + data[0].touristplace.name + "</td>";  
+        tab = tab + "<td>" +  data[0].touristplace.description+ "</td>";  
+        tab = tab + "<td>" + data[0].touristplace.address.location + "</td>";  
+        tab = tab + "<td>" + data[0].touristplace.address.city + "</td>";  
+        tab = tab + "<td>" + data[0].touristplace.address.state + "</td></tr>";  
+        $("#table").append(tab);
+
+    })  
+    })  
+    })  
+    </script>
+<body>
+   
+    Enter Tourist Place Name:<input type="text" id="uname"><br> <br> 
+    <button>click to get message</button>  
+    <button id ="btn">Get Complete Details</button>  
+    <div id="test">
+        <table style="border: solid; box-sizing: 1px;column-gap: 5rem;" id="table" border="2">  
+            <tr>  
+            <th>Name</th>  
+            <th>Description</th>  
+            <th>Location</th> 
+            <th>City</th> 
+            <th>State</th>    
+            </tr>  
+            </table>  
+    </div>     
+</body>
+</html>

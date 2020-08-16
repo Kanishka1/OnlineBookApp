@@ -1,0 +1,39 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Using Alert</title>  
+    <script>  
+function greet(){  
+     return ("hello")  
+}  
+function findAvg(m1,m2,m3){  
+     var sum = function (){  
+         return m1+m2+m3;  
+     }  
+    return sum()/3;  
+}  
+var avg = findAvg(90,80,90);  
+document.write(avg+"<br>");  
+function findAvg1(m1,m2,m3){  
+    return function (){  
+         return m1+m2+m3;  
+     };  
+}  
+var avg = findAvg1(90,80,90);  
+document.write(avg()/3);  
+function findAvg2(m1,m2,m3){  
+    return function (){  
+         return m1+m2+m3;  
+     }()/3;  
+}  
+var avg = findAvg2(90,80,90);  
+document.write(avg);  
+(function check(){  
+     document.write("<br>welcome")  
+})();  
+// check();  
+</script>  
+</head>  
+<body>  
+</body>  
+</html>  

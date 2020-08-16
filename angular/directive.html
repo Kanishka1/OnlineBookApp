@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="my-app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<strdirect msg='Hey There' 
+   desc='Angular Training'>
+</strdirect>
+
+<div ng-controller="directCtrl">
+<vardirect msg1='mymessage' desc1="mydesc" show="showItem()"></vardirect>
+<ul ng-repeat="prod in products" ng-show=flag>
+    <li>{{prod}}</li>
+</ul>
+</div>
+<script src="js/angular.min.js"></script>
+<script src="scripts/directive.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function()
+        { 
+            $('#add').click(()=>
+            {
+                $('#test1').removeClass('newclass').addClass('myclass')
+            })
+            $('#remove').click(()=>
+            {
+                $('#test1').removeClass('myclass').addClass('newclass');
+            })
+            
+        })
+
+    </script>
+    <style>  
+        .myclass{  
+        background-color: indianred;  
+        color:midnightblue;  
+        font-size: 20px ;  
+        }  
+        .newclass{  
+        background-color: lightseagreen;  
+        color:maroon;  
+        text-transform: uppercase;  
+        }  
+    </style> 
+</head>
+<body>
+ 
+        <div id="test1">  
+        <p >  
+        <h1>Good Morning</h1>  
+        <h2>Have a great day</h2>  
+        <h3>Happy learning</h3>  
+        </p>  
+        </div>  
+        <button id="add">Add</button>  
+        <button id="remove">Remove</button>  
+        <button id="toggle">Toggle</button>
+</body>
+</html>

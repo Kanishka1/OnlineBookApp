@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function()
+        {  
+            $('#two').click(()=>{  
+            $('[title]').css('background-color','red');  
+            $('[title=four]').css('font-weight','bold');  
+            $('[target=_blank]').html('Search here');
+            })  
+
+            $('[title=four]').click(()=>{  
+                $('[target=_self]').attr('href','http://www.shristitechlabs.com').html('online');                
+// console.log('hi')  
+})
+        })
+
+    </script>
+</head>
+<body>
+    <div title="one">Home</div>  
+    <div id="two">Contact</div>  
+    <p title="four">Training</p>  
+    <a href="http://www.google.com" target="_blank">Visit Google</a><br />  
+    <a href="http://www.google.com" target="_self">Visit Google</a><br />  
+</body>
+</html>

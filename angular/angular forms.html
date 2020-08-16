@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app>  
+        <div class="container">  
+            <div class="row">  
+                <div class="col-md-4">  
+                    <form name = "signupForm"  
+                    ng-submit = "addUser(signupForm.$valid)"  
+                    novalidate>  
+                    <div class="form-group" ng-class="  
+                    { 'has-error' :signupForm.username.$invalid && !signupForm.username.$touched },  
+                    {'has-success':signupForm.username.$valid }">  
+                    <label>Username</label>  
+                    <input type="text"  
+                    class="form-control"  
+                    name="username"  
+                    ng-model="user.username"  
+                    ng-minlength="5"  
+                    ng-maxlength='10'  
+                    ng-required='true'>  
+                    <p ng-show="signupForm.username.$invalid && signForm.username.$touched">  
+                        Username is required  
+                    </p>  
+                    <p ng-show="signupForm.username.$error.minlength">  
+                        name is too short  
+    </p>  
+    <p ng-show="signupForm.username.$error.maxlength">  
+                        name is too long  
+                    </p>  
+                </div>  
+                <div class="form-group">  
+                    <label for="">First Name</label>  
+                    <input type="text"  
+                                                class="form-control"  
+                                                name="firstname"  
+                                                ng-model='user.firstname'  
+                                                ng-required = 'true'  
+                                                ng-minlength="4"  
+                                                ng-maxlength="8">  
+                    <p >  
+                        <div ng-show="signupForm.firstname.$invalid && signupForm.firstname.$touched"  
+                              ng-messages = "signupForm.firstname.$error">  
+                               
+                        <p ng-message='required'>Name is required</p>  
+                        <p ng-message='minlength'>Too Short</p>  
+                        <p ng-message='maxlength'>Too Long</p>  
+                    </div>  
+                    <div ng-show="signupForm.firstname.$invalid && signupForm.firstname.$touched"  
+                              ng-messages = "signupForm.firstname.$error">  
+                               
+                        <p ng-message='required'>Name is required</p>  
+                        <p ng-message='minlength'>Too Short</p>  
+                        <p ng-message='maxlength'>Too Long</p>  
+                    </div>   
+                    <input type="submit" value="Add User" class = 'btn btn-primary' ng-disabled="signupForm.$invalid">  
+                </form>  
+            </div>  
+        </div>  
+    </div>  
+    <script src="js/angular.min.js">    </script>  
+    <script src="https://code.jquery.com/jquery.js"></script>  
+    <!-- Bootstrap JavaScript -->  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>  
+</body>
+</html>

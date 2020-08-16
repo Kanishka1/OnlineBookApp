@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script>
+    $(document).ready(function() {  
+     $("#mybutton").click(function(){  
+     $("#test1>p").css("color","blue");//child selector  
+     $("#test1 i").css({"color":"green",'font-weight':'bold'}); //all descendants  
+    });  
+});
+    </script>
+</head>
+<body>
+    <div id="test1">  
+        <p>Hello world </p>  
+        <p>Hello world </p>  
+        <i>Good Morning </i>  
+        <div id="test2">  
+            <p>Hello World </p>  
+            <i>Good Morning</i>  
+        <div id="test3">  
+                <p>Hello World </p>  
+                <i>Good Morning </i>  
+        </div>  
+        </div>  
+    </div>  
+    <i>Good Morning </i>  
+    <br>  
+    <button id = "mybutton" >Click here</button>
+</body>
+</html>

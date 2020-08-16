@@ -1,0 +1,42 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Using Alert</title>  
+    <script>  
+    var Student = function (name,city){  
+        this.name = name;  
+        this.city =city;  
+        this.getDetails= function(){  
+            document.write(this.name+" "+this.city+"<br>");  
+        }  
+    }  
+    var student = new Student("Ram","Ban");  
+    //document.write(student.name+" "+student.city);  
+    student.getDetails();  
+    var student1 = new Student("Ram1","Ban1");  
+    //document.write(student1.name+" "+student1.city);  
+    student1.getDetails();  
+    Student.prototype.department = "CSE"; 
+    Student.prototype.fincTotal=function(m1,m2){  
+     document.write("Sum "+(m1+m2)+"<br>");  
+          
+    }   
+    student.fincTotal(50,50);
+    student1.fincTotal(80,90);
+    student.department="CSE";
+    document.write(student.department+"<br>");
+    student1.department="IT";
+    document.write(student1.department);
+    document.write("<br> Getting Details...<br>");
+    student.getDetails();
+    student1.getDetails();  
+    var st={}  
+    document.write(typeof st);  
+    document.write(typeof student);  
+    document.write(st instanceof Student);  
+    document.write(student instanceof Student);  
+    </script>  
+</head>  
+<body>  
+</body>  
+</html>  

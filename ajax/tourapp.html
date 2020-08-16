@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="form.css">
+</head>
+<script src="../jquery/js/jquery-3.5.1.js"></script>
+<script src="tourscript.js"> </script>
+<body>
+
+  <div class="header">
+    <a href="#default" class="name">Tour App</a>
+    <div style="float:right;">
+      <a  href="index.html">Home</a>
+      <a class="active" href="tourapp.html">Tourist Places</a>
+      <a href="hotel.html">Hotels</a>
+      <a href="event.html">Events</a>
+      <a href="adddetails.html">Add Details</a>
+    </div>
+  </div> 
+      <div class="form1" style="height: 131px;">
+        <input type="button" value="Get All Tourist Places" id="btn1" style="margin-top: 43px;">
+        </form>
+      </div>
+      <div class="form1">
+        <form >
+        Enter Name To Get Tourist Place Details<input type="text" id="uname"  placeholder="Enter Tourist Place Name">
+        <input type="button" value="Get Tourist Place Details" id="btn">
+        </form>
+      </div>
+        <div class="form1" style="margin-left: 280px;">
+          <form>
+          Enter Location To Get Tourist Place Details <input type="text" id="location" placeholder="Enter Tourist Place Location">
+          <input type="button" value="Get Tourist Place Details" id="btn2">
+          </form>
+      </div>
+    <div id="test">
+        <table id="table" border="2" class="form1" style="width: 100%;">    
+            <tr>  
+            <th>Name</th>  
+            <th>Description</th>  
+            <th>Location</th> 
+            <th>City</th> 
+            <th>State</th>    
+            </tr>  
+            </table>  
+    </div>     
+</body>
+</html>

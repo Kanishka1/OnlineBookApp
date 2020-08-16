@@ -1,0 +1,22 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<title>Insert title here</title>  
+</head>  
+<script type="text/javascript">  
+function register(){  
+    uname = document.getElementById("username").value;  
+    document.cookie="newuser="+uname;  
+    document.cookie="training=angular";  
+    document.cookie="location=JABALPUR";  
+    document.myform.submit();  
+}  
+</script>  
+<body>  
+<h1>Register</h1>  
+<form action="../index.html" name="myform">  
+Enter Name<input type="text" id = "username" name="uname">  
+<input type="submit" onclick="register()" value="click here" >  
+</form>  
+</body>  
+</html>

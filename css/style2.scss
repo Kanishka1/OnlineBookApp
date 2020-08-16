@@ -1,0 +1,26 @@
+$div_color:green;  
+$p_color:blue;  
+$header_color:yellow;  
+$height:50px;  
+$width:150px;  
+h1{  
+background-color: $header_color;  
+color:$div_color;  
+}  
+div{  
+height:$height*2;  
+width:$width+5;  
+$p_color:pink !global;  
+background-color: $p_color;  
+}  
+p{  
+background-color: $p_color;  
+letter-spacing: 3px;  
+text-transform: uppercase;  
+}  
+#myid{  
+@extend p;  
+color:blue;  
+font-weight: bold;  
+ 
+}
